@@ -47,8 +47,8 @@
     .hero-cta{margin-top:2.5rem;}
     .btn{display:inline-block;padding:.85rem 2.8rem;border:1px solid rgba(255,255,255,.55);color:#fff;font-family:var(--font-ui);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .35s;background:transparent;cursor:pointer;}
     .btn:hover{background:rgba(255,255,255,.1);border-color:#fff;}
-    .btn-dark{border-color:var(--burg);color:var(--burg);background:transparent;}
-    .btn-dark:hover{background:var(--burg);color:var(--cream);}
+    .btn-dark{border-color:rgba(253,250,245,.6);color:var(--cream);background:transparent;}
+    .btn-dark:hover{background:rgba(253,250,245,.15);color:var(--cream);}
     /* COUNTDOWN */
     #countdown{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4.5rem 2rem;text-align:center;}
     .countdown-label{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;}
@@ -153,54 +153,54 @@
     .faq-a p{font-size:.83rem;color:var(--muted);line-height:1.85;padding-bottom:1.8rem;padding-right:3rem;}
 
     /* ── RSVP ── */
-    #rsvp{background:var(--cream);text-align:center;}
+    #rsvp{background:var(--burg-deep);text-align:center;} #rsvp .stag{color:rgba(253,250,245,.4);} #rsvp .stitle{color:var(--cream);} #rsvp .rule{background:rgba(184,152,106,.5);}
     #rsvp .inner{max-width:640px;}
     #rsvp .stitle{text-align:center;}
     #rsvp .rule{margin:0 auto 2rem;}
-    .rsvp-sub{font-family:var(--font-s);font-size:1.05rem;font-style:italic;font-weight:300;color:var(--muted);margin-bottom:3.5rem;line-height:1.8;}
+    .rsvp-sub{font-family:var(--font-s);font-size:1.05rem;font-style:italic;font-weight:300;color:rgba(253,250,245,.6);margin-bottom:3.5rem;line-height:1.8;}
 
     /* Search autocomplete */
     .search-wrap{position:relative;margin-bottom:2rem;text-align:left;}
-    .search-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.5rem;}
-    .search-input{width:100%;background:var(--white);border:1px solid var(--border);padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
+    .search-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.5rem;}
+    .search-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);color:var(--cream);padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
     .search-input:focus{border-color:var(--burg-soft);}
     .search-input::placeholder{color:var(--border);}
-    .dropdown{position:absolute;top:100%;left:0;right:0;background:var(--white);border:1px solid var(--border);border-top:none;z-index:50;max-height:260px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+    .dropdown{position:absolute;top:100%;left:0;right:0;background:#5a1828;border:1px solid rgba(253,250,245,.2);border-top:none;z-index:50;max-height:260px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.25);}
     .dropdown.open{display:block;}
-    .dd-item{padding:.9rem 1rem;cursor:pointer;text-align:left;border-bottom:1px solid rgba(226,217,206,.4);transition:background .2s;}
+    .dd-item{padding:.9rem 1rem;cursor:pointer;text-align:left;border-bottom:1px solid rgba(253,250,245,.1);transition:background .2s;}
     .dd-item:last-child{border-bottom:none;}
-    .dd-item:hover{background:var(--off);}
-    .dd-name{font-size:.88rem;color:var(--text);}
-    .dd-sub{font-size:.7rem;color:var(--muted);margin-top:2px;}
+    .dd-item:hover{background:rgba(255,255,255,.1);}
+    .dd-name{font-size:.88rem;color:var(--cream);}
+    .dd-sub{font-size:.7rem;color:rgba(253,250,245,.45);margin-top:2px;}
 
     /* Guest panel */
     #guest-panel{display:none;text-align:left;animation:fadeUp .4s ease;}
-    .guest-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
-    .guest-header-name{font-family:var(--font-d);font-style:italic;font-size:1.6rem;color:var(--dark);}
+    .guest-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(253,250,245,.15);}
+    .guest-header-name{font-family:var(--font-d);font-style:italic;font-size:1.6rem;color:var(--cream);}
     .change-btn{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--burg-soft);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0;}
     .change-btn:hover{color:var(--burg);}
 
     /* Attendance radio */
     .att-group{margin-bottom:2rem;}
-    .att-label-top{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.8rem;}
+    .att-label-top{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .att-options{display:flex;gap:1rem;}
     .att-opt{flex:1;position:relative;}
     .att-opt input[type=radio]{position:absolute;opacity:0;width:0;}
-    .att-opt label{display:block;padding:.9rem 1rem;border:1px solid var(--border);text-align:center;cursor:pointer;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--white);transition:all .3s;}
+    .att-opt label{display:block;padding:.9rem 1rem;border:1px solid rgba(253,250,245,.2);text-align:center;cursor:pointer;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,250,245,.6);background:rgba(255,255,255,.06);transition:all .3s;}
     .att-opt input[type=radio]:checked + label{border-color:var(--burg);color:var(--burg);background:rgba(107,30,46,.04);}
 
     /* Members checklist */
     #members-section{margin-bottom:2rem;display:none;}
-    .members-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.8rem;}
+    .members-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .members-list{display:flex;flex-direction:column;gap:.5rem;}
-    .member-check{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border:1px solid var(--border);background:var(--white);cursor:pointer;transition:background .2s;}
+    .member-check{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);cursor:pointer;transition:background .2s;}
     .member-check:hover{background:var(--off);}
     .member-check input[type=checkbox]{width:14px;height:14px;accent-color:var(--burg);cursor:pointer;flex-shrink:0;}
-    .member-check span{font-size:.85rem;color:var(--text);}
+    .member-check span{font-size:.85rem;color:rgba(253,250,245,.8);}
 
     /* Plus one */
     #plus-section{margin-bottom:2rem;display:none;}
-    .plus-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.8rem;}
+    .plus-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .plus-options{display:flex;gap:1rem;}
     .plus-name-wrap{margin-top:1rem;display:none;}
     .plus-name-wrap input{width:100%;background:var(--white);border:1px solid var(--border);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;}
@@ -209,16 +209,16 @@
     /* Extra fields */
     .extra-fields{display:flex;flex-direction:column;gap:1.5rem;}
     .fg{display:flex;flex-direction:column;gap:.5rem;}
-    .fg label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
-    .fg input,.fg select,.fg textarea{background:var(--white);border:1px solid var(--border);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:var(--text);outline:none;transition:border-color .3s;appearance:none;border-radius:0;}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--burg-soft);}
+    .fg label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);}
+    .fg input,.fg select,.fg textarea{background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:var(--cream);outline:none;transition:border-color .3s;appearance:none;border-radius:0;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(253,250,245,.5);}
     .fg textarea{resize:vertical;min-height:85px;}
     .submit-wrap{text-align:center;margin-top:2rem;}
 
     /* Success */
-    .rsvp-ok{display:none;text-align:center;padding:4rem 3rem;border:1px solid var(--border);background:var(--white);}
+    .rsvp-ok{display:none;text-align:center;padding:4rem 3rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);}
     .rsvp-ok h3{font-family:var(--font-d);font-style:italic;font-size:2.5rem;font-weight:400;color:var(--burg);margin-bottom:1rem;}
-    .rsvp-ok p{font-family:var(--font-s);font-size:1rem;color:var(--muted);line-height:1.8;}
+    .rsvp-ok p{font-family:var(--font-s);font-size:1rem;color:rgba(253,250,245,.6);line-height:1.8;}
 
     /* FOOTER */
     footer{background:#3D0E1A;padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
@@ -389,7 +389,7 @@
     <h2 class="stitle reveal">Cómo empezó todo</h2>
     <div class="rule reveal"></div>
     <div class="historia-grid">
-      <div class="historia-photo reveal"><img src="historia.jpg" alt="Paola y Juan" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+      <div class="historia-photo reveal"><img src="historia.JPG" alt="Paola y Juan" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
       <div>
         <div class="story-body reveal">
           <p>Todo comenzó con un match en Bumble. Lo que parecía ser una conversación más entre millones se convirtió, sin que ninguno lo planeara, en algo completamente diferente.</p>
