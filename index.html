@@ -162,9 +162,9 @@
     /* Search autocomplete */
     .search-wrap{position:relative;margin-bottom:2rem;text-align:left;}
     .search-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.5rem;}
-    .search-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);color:var(--cream);padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
+    .search-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);color:#fff;padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
     .search-input:focus{border-color:var(--burg-soft);}
-    .search-input::placeholder{color:var(--border);}
+    .search-input::placeholder{color:rgba(253,250,245,.35);}
     .dropdown{position:absolute;top:100%;left:0;right:0;background:#5a1828;border:1px solid rgba(253,250,245,.2);border-top:none;z-index:50;max-height:260px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.25);}
     .dropdown.open{display:block;}
     .dd-item{padding:.9rem 1rem;cursor:pointer;text-align:left;border-bottom:1px solid rgba(253,250,245,.1);transition:background .2s;}
@@ -203,15 +203,15 @@
     .plus-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .plus-options{display:flex;gap:1rem;}
     .plus-name-wrap{margin-top:1rem;display:none;}
-    .plus-name-wrap input{width:100%;background:var(--white);border:1px solid var(--border);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;}
+    .plus-name-wrap input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:#fff;outline:none;transition:border-color .3s;border-radius:0;} .plus-name-wrap input::placeholder{color:rgba(253,250,245,.35);}
     .plus-name-wrap input:focus{border-color:var(--burg-soft);}
 
     /* Extra fields */
     .extra-fields{display:flex;flex-direction:column;gap:1.5rem;}
     .fg{display:flex;flex-direction:column;gap:.5rem;}
     .fg label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);}
-    .fg input,.fg select,.fg textarea{background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:var(--cream);outline:none;transition:border-color .3s;appearance:none;border-radius:0;}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(253,250,245,.5);}
+    .fg input,.fg select,.fg textarea{background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:#fff;outline:none;transition:border-color .3s;appearance:none;border-radius:0;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(253,250,245,.5);} .fg input::placeholder,.fg textarea::placeholder{color:rgba(253,250,245,.35);} .fg select option{background:var(--burg-deep);color:#fff;}
     .fg textarea{resize:vertical;min-height:85px;}
     .submit-wrap{text-align:center;margin-top:2rem;}
 
@@ -389,7 +389,7 @@
     <h2 class="stitle reveal">Cómo empezó todo</h2>
     <div class="rule reveal"></div>
     <div class="historia-grid">
-      <div class="historia-photo reveal"><img src="historia.JPG" alt="Paola y Juan" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+      <div class="historia-photo reveal"><img src="historia.jpg" alt="Paola y Juan" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
       <div>
         <div class="story-body reveal">
           <p>Todo comenzó con un match en Bumble. Lo que parecía ser una conversación más entre millones se convirtió, sin que ninguno lo planeara, en algo completamente diferente.</p>
