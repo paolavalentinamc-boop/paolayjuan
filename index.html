@@ -162,9 +162,9 @@
     /* Search autocomplete */
     .search-wrap{position:relative;margin-bottom:2rem;text-align:left;}
     .search-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.5rem;}
-    .search-input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);color:#fff;padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
-    .search-input:focus{border-color:var(--burg-soft);}
-    .search-input::placeholder{color:rgba(253,250,245,.35);}
+    .search-input{width:100%;background:rgba(255,255,255,.12);border:1px solid rgba(253,250,245,.45);color:#fff;padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
+    .search-input:focus{border-color:rgba(253,250,245,.85);outline:none;background:rgba(255,255,255,.15);}
+    .search-input::placeholder{color:rgba(253,250,245,.55);font-style:italic;}
     .dropdown{position:absolute;top:100%;left:0;right:0;background:#5a1828;border:1px solid rgba(253,250,245,.2);border-top:none;z-index:50;max-height:260px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.25);}
     .dropdown.open{display:block;}
     .dd-item{padding:.9rem 1rem;cursor:pointer;text-align:left;border-bottom:1px solid rgba(253,250,245,.1);transition:background .2s;}
@@ -316,7 +316,7 @@
       <!-- SEARCH -->
       <div class="search-wrap" id="search-wrap">
         <label class="search-label" for="guest-search">¿Cómo te llamas?</label>
-        <input type="text" id="guest-search" class="search-input" placeholder="Escribe tu nombre para encontrarte…" autocomplete="off"/>
+        <input type="text" id="guest-search" class="search-input" placeholder="Escribe tu nombre para encontrarte…" autocomplete="off" style="color:#fff;caret-color:#fff;"/>
         <div class="dropdown" id="dropdown"></div>
       </div>
 
