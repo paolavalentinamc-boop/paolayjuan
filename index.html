@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Paola & Juan — 17.07.2026</title>
+  <title>Juanpa & Pao 💍</title>
+  <!-- Favicon emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500&family=Parisienne&display=swap" rel="stylesheet"/>
@@ -36,8 +38,6 @@
     /* HERO */
     #hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:8vh;overflow:hidden;}
     .hero-bg{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(28,16,8,.45) 0%,rgba(28,16,8,.35) 40%,rgba(28,16,8,.75) 100%),url('hero.jpg') center center/cover no-repeat;}
-    .hero-photo-note{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:1;}
-    .hero-photo-note p{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.2);}
     .hero-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;}
     .hero-names{font-family:var(--font-d);font-style:italic;font-size:clamp(3.8rem,10vw,8.5rem);font-weight:400;color:#fff;line-height:.9;letter-spacing:.02em;}
     .hero-amp{font-family:var(--font-s);font-style:italic;font-size:clamp(2rem,5vw,4rem);color:#fff;display:block;line-height:1.3;font-weight:300;}
@@ -49,14 +49,15 @@
     .btn:hover{background:rgba(255,255,255,.1);border-color:#fff;}
     .btn-dark{border-color:rgba(253,250,245,.6);color:var(--cream);background:transparent;}
     .btn-dark:hover{background:rgba(253,250,245,.15);color:var(--cream);}
+
     /* COUNTDOWN */
-    #countdown{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4.5rem 2rem;text-align:center;}
-    .countdown-label{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem;}
-    .cd-grid{display:flex;justify-content:center;flex-wrap:wrap;}
-    .cd-item{display:flex;flex-direction:column;align-items:center;padding:0 2.5rem;border-right:1px solid var(--border);}
+    #countdown{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 1rem;text-align:center;}
+    .countdown-label{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem;}
+    .cd-grid{display:flex;justify-content:center;flex-wrap:nowrap;width:100%;}
+    .cd-item{display:flex;flex-direction:column;align-items:center;padding:0 clamp(.8rem,3vw,2.5rem);border-right:1px solid var(--border);flex:1;max-width:160px;}
     .cd-item:last-child{border-right:none;}
-    .cd-num{font-family:var(--font-s);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--burg);line-height:1;margin-bottom:.6rem;}
-    .cd-unit{font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;}
+    .cd-num{font-family:var(--font-s);font-size:clamp(2rem,5vw,4rem);font-weight:300;color:var(--burg);line-height:1;margin-bottom:.6rem;}
+    .cd-unit{font-size:clamp(.42rem,.9vw,.52rem);letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.4rem;white-space:nowrap;}
 
     /* SECTIONS */
     section{padding:8rem 2rem;}
@@ -70,9 +71,7 @@
     #historia{background:var(--white);}
     .historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
     .story-body p{font-family:var(--font-s);font-size:1.15rem;font-weight:300;line-height:1.95;color:var(--text);margin-bottom:1.5rem;}
-    .historia-photo{aspect-ratio:3/4;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-    .historia-photo::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(184,152,106,.04) 0,rgba(184,152,106,.04) 1px,transparent 1px,transparent 24px);}
-    .ph-label{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--border);position:relative;z-index:1;text-align:center;line-height:2;}
+    .historia-photo{aspect-ratio:3/4;background:var(--off);border:1px solid var(--border);overflow:hidden;}
     .milestones{display:flex;flex-direction:column;}
     .milestone{display:grid;grid-template-columns:52px 1fr;gap:1.2rem;padding:2rem 0;border-bottom:1px solid var(--border);}
     .milestone:first-child{padding-top:0;}.milestone:last-child{border-bottom:none;}
@@ -102,15 +101,6 @@
     .map-frame{aspect-ratio:4/3;border:1px solid var(--border);overflow:hidden;background:var(--off);}
     .map-frame iframe{width:100%;height:100%;border:none;display:block;}
 
-    /* ALOJAMIENTO */
-    #alojamiento{background:var(--off);}
-    .hotel-intro{font-family:var(--font-s);font-size:1.15rem;font-style:italic;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:3rem;max-width:560px;}
-    .hotel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
-    .hotel-card{background:var(--white);padding:2.5rem 2rem;}
-    .hotel-tag{font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--burg-soft);margin-bottom:1rem;}
-    .hotel-name{font-family:var(--font-d);font-style:italic;font-size:1.3rem;color:var(--dark);margin-bottom:.8rem;line-height:1.2;}
-    .hotel-text{font-size:.78rem;color:var(--muted);line-height:1.78;}
-
     /* DRESSCODE */
     #dresscode{background:var(--burg-deep);color:var(--cream);}
     #dresscode .stag{color:rgba(184,152,106,.55);}
@@ -129,17 +119,10 @@
     .swatch{width:34px;height:34px;border-radius:50%;flex-shrink:0;}
     .color-label{font-size:.82rem;color:rgba(253,250,245,.5);line-height:1.5;}
     .color-label strong{display:block;color:rgba(253,250,245,.85);font-weight:400;margin-bottom:.15rem;}
-    .dc-note{margin-top:1.5rem;font-size:.75rem;font-style:italic;color:rgba(253,250,245,.28);line-height:1.75;}
 
     /* REGALOS */
     #regalos{background:var(--white);}
-    .regalo-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:1rem;text-align:center;}
     .regalo-msg{font-family:var(--font-s);font-size:1.15rem;font-style:italic;font-weight:300;line-height:1.9;color:var(--text);}
-    .regalo-cards{display:flex;flex-direction:column;gap:1.5rem;}
-    .regalo-card{border:1px solid var(--border);padding:2rem 2.5rem;background:var(--off);}
-    .rc-label{font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--burg-soft);margin-bottom:.6rem;}
-    .rc-platform{font-family:var(--font-d);font-style:italic;font-size:1.4rem;color:var(--dark);margin-bottom:.4rem;}
-    .rc-value{font-family:var(--font-ui);font-size:.88rem;color:var(--muted);letter-spacing:.05em;}
 
     /* Q&A */
     #qa{background:var(--off);}
@@ -152,18 +135,19 @@
     .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
     .faq-a p{font-size:.83rem;color:var(--muted);line-height:1.85;padding-bottom:1.8rem;padding-right:3rem;}
 
-    /* ── RSVP ── */
-    #rsvp{background:var(--burg-deep);text-align:center;} #rsvp .stag{color:rgba(253,250,245,.4);} #rsvp .stitle{color:var(--cream);} #rsvp .rule{background:rgba(184,152,106,.5);}
+    /* RSVP */
+    #rsvp{background:var(--burg-deep);text-align:center;}
+    #rsvp .stag{color:rgba(253,250,245,.4);}
+    #rsvp .stitle{color:var(--cream);}
+    #rsvp .rule{background:rgba(184,152,106,.5);margin:0 auto 2rem;}
     #rsvp .inner{max-width:640px;}
-    #rsvp .stitle{text-align:center;}
-    #rsvp .rule{margin:0 auto 2rem;}
     .rsvp-sub{font-family:var(--font-s);font-size:1.05rem;font-style:italic;font-weight:300;color:rgba(253,250,245,.6);margin-bottom:3.5rem;line-height:1.8;}
 
-    /* Search autocomplete */
+    /* Search */
     .search-wrap{position:relative;margin-bottom:2rem;text-align:left;}
     .search-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.5rem;}
-    .search-input{width:100%;background:rgba(255,255,255,.12);border:1px solid rgba(253,250,245,.45);color:#fff;padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;color:var(--text);outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
-    .search-input:focus{border-color:rgba(253,250,245,.85);outline:none;background:rgba(255,255,255,.15);}
+    .search-input{width:100%;background:rgba(255,255,255,.12);border:1px solid rgba(253,250,245,.45);color:#fff;caret-color:#fff;padding:.95rem 1rem;font-family:var(--font-ui);font-size:.9rem;outline:none;transition:border-color .3s;border-radius:0;appearance:none;}
+    .search-input:focus{border-color:rgba(253,250,245,.85);background:rgba(255,255,255,.15);}
     .search-input::placeholder{color:rgba(253,250,245,.55);font-style:italic;}
     .dropdown{position:absolute;top:100%;left:0;right:0;background:#5a1828;border:1px solid rgba(253,250,245,.2);border-top:none;z-index:50;max-height:260px;overflow-y:auto;display:none;box-shadow:0 8px 24px rgba(0,0,0,.25);}
     .dropdown.open{display:block;}
@@ -180,22 +164,23 @@
     .change-btn{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--burg-soft);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0;}
     .change-btn:hover{color:var(--burg);}
 
-    /* Attendance radio */
+    /* Radio */
     .att-group{margin-bottom:2rem;}
     .att-label-top{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .att-options{display:flex;gap:1rem;}
     .att-opt{flex:1;position:relative;}
     .att-opt input[type=radio]{position:absolute;opacity:0;width:0;}
-    .att-opt label{display:block;padding:.9rem 1rem;border:1px solid rgba(253,250,245,.3);text-align:center;cursor:pointer;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,250,245,.7);background:rgba(255,255,255,.06);transition:all .3s;} .att-opt label:hover{border-color:rgba(253,250,245,.6);color:#fff;background:rgba(255,255,255,.12);}
+    .att-opt label{display:block;padding:.9rem 1rem;border:1px solid rgba(253,250,245,.3);text-align:center;cursor:pointer;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(253,250,245,.7);background:rgba(255,255,255,.06);transition:all .3s;}
+    .att-opt label:hover{border-color:rgba(253,250,245,.6);color:#fff;background:rgba(255,255,255,.12);}
     .att-opt input[type=radio]:checked + label{border-color:#fff;color:#fff;background:rgba(255,255,255,.18);font-weight:500;}
 
-    /* Members checklist */
+    /* Members */
     #members-section{margin-bottom:2rem;display:none;}
     .members-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .members-list{display:flex;flex-direction:column;gap:.5rem;}
     .member-check{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);cursor:pointer;transition:background .2s;}
-    .member-check:hover{background:var(--off);}
-    .member-check input[type=checkbox]{width:14px;height:14px;accent-color:var(--burg);cursor:pointer;flex-shrink:0;}
+    .member-check:hover{background:rgba(255,255,255,.1);}
+    .member-check input[type=checkbox]{width:14px;height:14px;accent-color:#fff;cursor:pointer;flex-shrink:0;}
     .member-check span{font-size:.85rem;color:rgba(253,250,245,.8);}
 
     /* Plus one */
@@ -203,29 +188,31 @@
     .plus-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .plus-options{display:flex;gap:1rem;}
     .plus-name-wrap{margin-top:1rem;display:none;}
-    .plus-name-wrap input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:#fff;outline:none;transition:border-color .3s;border-radius:0;} .plus-name-wrap input::placeholder{color:rgba(253,250,245,.35);}
-    .plus-name-wrap input:focus{border-color:var(--burg-soft);}
+    .plus-name-wrap input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:#fff;outline:none;transition:border-color .3s;border-radius:0;}
+    .plus-name-wrap input::placeholder{color:rgba(253,250,245,.35);}
+    .plus-name-wrap input:focus{border-color:rgba(253,250,245,.5);}
 
     /* Extra fields */
     .extra-fields{display:flex;flex-direction:column;gap:1.5rem;}
     .fg{display:flex;flex-direction:column;gap:.5rem;}
     .fg label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);}
     .fg input,.fg select,.fg textarea{background:rgba(255,255,255,.08);border:1px solid rgba(253,250,245,.2);padding:.9rem 1rem;font-family:var(--font-ui);font-size:.87rem;color:#fff;outline:none;transition:border-color .3s;appearance:none;border-radius:0;}
-    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(253,250,245,.5);} .fg input::placeholder,.fg textarea::placeholder{color:rgba(253,250,245,.35);} .fg select option{background:var(--burg-deep);color:#fff;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(253,250,245,.5);}
+    .fg input::placeholder,.fg textarea::placeholder{color:rgba(253,250,245,.35);}
+    .fg select option{background:var(--burg-deep);color:#fff;}
     .fg textarea{resize:vertical;min-height:85px;}
     .submit-wrap{text-align:center;margin-top:2rem;}
 
     /* Success */
     .rsvp-ok{display:none;text-align:center;padding:4rem 3rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);}
-    .rsvp-ok h3{font-family:var(--font-d);font-style:italic;font-size:2.5rem;font-weight:400;color:var(--burg);margin-bottom:1rem;}
+    .rsvp-ok h3{font-family:var(--font-d);font-style:italic;font-size:2.5rem;font-weight:400;color:var(--cream);margin-bottom:1rem;}
     .rsvp-ok p{font-family:var(--font-s);font-size:1rem;color:rgba(253,250,245,.6);line-height:1.8;}
 
     /* FOOTER */
-    footer{background:#3D0E1A;padding:2.5rem 2rem 2rem;text-align:center;position:relative;overflow:hidden;}
-    .ft-stripe{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--burg-deep),rgba(74,18,32,.4),var(--burg-deep));}
-    .ft-logo img{height:80px;width:auto;display:block;margin:0 auto 1.5rem;}
-    .ft-date{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(253,240,235,.6);margin-bottom:1.2rem;}
-    .ft-rule{width:1px;height:40px;background:rgba(74,18,32,.2);margin:0 auto 2.5rem;}
+    footer{background:#3D0E1A;padding:2rem 2rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+    .ft-stripe{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--burg-deep),rgba(184,152,106,.4),var(--burg-deep));}
+    .ft-date{font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(253,240,235,.6);margin-bottom:.6rem;}
+    .ft-rule{width:1px;height:20px;background:rgba(253,240,235,.2);margin:0 auto .6rem;}
     .ft-text{font-family:var(--font-s);font-style:italic;font-size:.8rem;color:rgba(253,240,235,.4);}
 
     /* ANIM */
@@ -241,10 +228,9 @@
     @media(max-width:900px){
       nav{padding:0 1.5rem;}.nav-links{display:none;}.hamburger{display:flex;}
       section{padding:5rem 1.5rem;}
-      .historia-grid,.venue-grid,.dc-grid,.regalo-grid{grid-template-columns:1fr;gap:2.5rem;}
-      .hotel-grid,.tl-grid{grid-template-columns:1fr;}
+      .historia-grid,.venue-grid,.dc-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .tl-grid{grid-template-columns:1fr;}
       .tl-item{border-right:none!important;}.tl-item:last-child{border-bottom:none;}
-      .cd-item{padding:0 1.5rem;}
       .att-options,.plus-options{flex-direction:column;}
     }
     .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:var(--cream);justify-content:center;align-items:center;gap:2.5rem;z-index:199;}
@@ -269,9 +255,7 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg">
-    
-  </div>
+  <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-names">
       <span>Paola</span>
@@ -285,7 +269,6 @@
     </div>
     <div class="hero-cta"><a href="#rsvp" class="btn">Confirmar asistencia</a></div>
   </div>
-<span>Scroll</span></div>
 </section>
 
 <!-- COUNTDOWN -->
@@ -304,7 +287,7 @@
   <div class="inner">
     <span class="stag reveal">Confirmación</span>
     <h2 class="stitle reveal">Confirma tu asistencia</h2>
-    <div class="rule reveal" style="margin:0 auto 2rem;"></div>
+    <div class="rule reveal"></div>
     <p class="rsvp-sub reveal">Responde antes del 15 de mayo de 2026.</p>
 
     <div class="rsvp-ok" id="rsvp-ok">
@@ -313,25 +296,20 @@
     </div>
 
     <div id="rsvp-main" class="reveal">
-      <!-- SEARCH -->
       <div class="search-wrap" id="search-wrap">
         <label class="search-label" for="guest-search">¿Cómo te llamas?</label>
-        <input type="text" id="guest-search" class="search-input" placeholder="Escribe tu nombre para encontrarte…" autocomplete="off" style="color:#fff;caret-color:#fff;"/>
+        <input type="text" id="guest-search" class="search-input" placeholder="Escribe tu nombre para encontrarte…" autocomplete="off"/>
         <div class="dropdown" id="dropdown"></div>
       </div>
 
-      <!-- GUEST PANEL -->
       <div id="guest-panel">
         <div class="guest-header">
           <div class="guest-header-name" id="panel-title"></div>
           <button class="change-btn" onclick="resetSearch()">← Cambiar</button>
         </div>
-
         <form id="rsvp-form">
           <input type="hidden" id="f-guest-name" name="invitado"/>
           <input type="hidden" id="f-guest-type" name="tipo"/>
-
-          <!-- ATTENDANCE -->
           <div class="att-group">
             <span class="att-label-top">¿Asistirás?</span>
             <div class="att-options">
@@ -339,14 +317,10 @@
               <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No"/><label for="att-no">No podré asistir</label></div>
             </div>
           </div>
-
-          <!-- FAMILY MEMBERS -->
           <div id="members-section">
             <span class="members-label">¿Quiénes de tu familia asistirán?</span>
             <div class="members-list" id="members-list"></div>
           </div>
-
-          <!-- PLUS ONE -->
           <div id="plus-section">
             <span class="plus-label">¿Llevas acompañante?</span>
             <div class="plus-options att-options">
@@ -357,8 +331,6 @@
               <input type="text" name="nombre_plus" placeholder="Nombre de tu acompañante"/>
             </div>
           </div>
-
-          <!-- EXTRA FIELDS -->
           <div class="extra-fields" id="extra-fields" style="display:none;">
             <div class="fg">
               <label for="f-food">Restricción alimentaria</label>
@@ -400,7 +372,7 @@
           <div class="milestone"><span class="m-year">2022</span><div><div class="m-title">Un match que lo cambió todo</div><p class="m-text">Nos conocimos en Bumble y una conversación se convirtió en algo que ninguno esperaba.</p></div></div>
           <div class="milestone"><span class="m-year">2023</span><div><div class="m-title">Inseparables</div><p class="m-text">Viajamos juntos, exploramos el mundo y descubrimos que queríamos seguir haciéndolo.</p></div></div>
           <div class="milestone"><span class="m-year">2024</span><div><div class="m-title">Un mismo hogar</div><p class="m-text">Dimos el paso de vivir juntos y aprendimos lo que significa construir una vida en común.</p></div></div>
-          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">El gran sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola..</p></div></div>
+          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">El gran sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola.</p></div></div>
         </div>
       </div>
     </div>
@@ -437,13 +409,11 @@
         <a href="https://maps.app.goo.gl/eBAMfCRkmpxqefK88" target="_blank" class="venue-link">Ver en Google Maps →</a>
       </div>
       <div class="map-frame">
-        <iframe src="https://maps.google.com/maps?q=El+Retiro+de+San+Juan,+Bogota,+Colombia&output=embed&z=16" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="El Retiro de San Juan"></iframe>
+        <iframe src="https://maps.google.com/maps?q=El+Retiro+de+San+Juan,+Bogota,+Colombia&output=embed&z=16" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="El Retiro de San Juan" style="width:100%;height:100%;border:none;"></iframe>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <!-- DRESSCODE -->
 <section id="dresscode">
@@ -464,7 +434,7 @@
             <div class="color-row"><div class="swatch" style="background:#6B1E2E;"></div><div class="color-label"><strong>Borgoña</strong>Es nuestro color de la noche.</div></div>
           </div>
         </div>
-        <p class="dc-note" style="color:rgba(253,250,245,.55);font-size:.8rem;margin-top:1.5rem;line-height:1.8;font-style:italic;">Fuera de eso, ¡todo vale! Tonos oscuros, colores joya, tierra, pasteles — cualquier color es bienvenido.</p>
+        <p style="color:rgba(253,250,245,.6);font-size:.82rem;margin-top:1.5rem;line-height:1.85;font-style:italic;font-family:var(--font-s);">Fuera de eso, ¡todo vale! Tonos oscuros, colores joya, tierra, pasteles — cualquier color es bienvenido.</p>
       </div>
     </div>
   </div>
@@ -476,11 +446,11 @@
     <span class="stag reveal">Regalos</span>
     <h2 class="stitle reveal">Su presencia es nuestro regalo</h2>
     <div class="rule reveal"></div>
-    <div class="regalo-grid reveal" style="display:block;text-align:center;max-width:600px;margin:0 auto;">
-        <div style="font-size:3rem;margin-bottom:1.5rem;">💌</div>
-        <p class="regalo-msg" style="font-size:1.2rem;">Su presencia es nuestro regalo más grande.</p>
-        <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si desean hacernos un detalle, tendremos un cofre de sobres esperándolos — una lluvia de sobres con todo su amor será más que suficiente.</p>
-        <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">También recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo. 🕊️</p>
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
+      <div style="font-size:3rem;margin-bottom:1.5rem;">💌</div>
+      <p class="regalo-msg" style="font-size:1.2rem;">Su presencia es nuestro regalo más grande.</p>
+      <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si desean hacernos un detalle, tendremos un cofre de sobres esperándolos — una lluvia de sobres con todo su amor será más que suficiente.</p>
+      <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">También recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo. 🕊️</p>
     </div>
   </div>
 </section>
@@ -501,172 +471,118 @@
   </div>
 </section>
 
-
-
 <!-- FOOTER -->
 <footer>
   <div class="ft-stripe"></div>
   <p class="ft-date">17 · 07 · 2026 &nbsp;·&nbsp; Bogotá, Colombia</p>
   <div class="ft-rule"></div>
-  <p class="ft-text">Con amor, Paola y Juan</p>
+  <p class="ft-text">Con amor, Juanpa y Pao</p>
 </footer>
 
 <script>
-// ── GUEST DATA ──
-const GUESTS = {"individuals": ["Indira Camperos", "Jesús Méndez", "Nubia Dulcey", "Lya Camperos", "Felix Camperos", "Rossana Fedele", "Sofía Puentes", "John Ávila", "Marisol Madrigal", "David Ávila", "Celmira Madrigal", "Ricardo Ávila", "Liliana Rodriguez", "Oscar Madrigal", "Nataly Gacharná", "Juan Daniel Madrigal", "Jose Fernandez Rengifo", "Juan Miguel Gómez", "Kevin Llinas", "Paulina Quintero", "Sofía Restrepo", "Bryan Álvarez", "Laura Daniela García", "Liz Marcela Duarte", "Jeremiah Hilkiah", "Victor Pedreros", "Alejandra Restrepo"], "plus_one": ["Angélica Ávila", "Dr. Ana Gómez", "Dr. Gustavo Quintero"], "families": [{"label": "Jesús Manuel Méndez y esposa", "members": ["Jesús Manuel Méndez", "Indira Pérez Meneses"]}, {"label": "Zulay Méndez y esposo", "members": ["Zulay Méndez", "José Álvarez"]}, {"label": "Javier Mejía y familia", "members": ["Mónica De Lazaeta", "Javier Mejía", "Santiago Mejía", "Abrey Mejía"]}, {"label": "Juan Manuel Hernández y esposa", "members": ["Juan Manuel Hernández", "Cheilan Pantaleón"]}, {"label": "Diego Borbón y esposa", "members": ["Paola Andrea Patiño", "Diego Alejandro Borbón"]}, {"label": "Laura Silvana Díaz", "members": ["Laura Silvana Díaz", "Andrés Felipe García"]}, {"label": "Paula Catalina Betancur", "members": ["Paula Catalina Betancur", "Juan Sebastián Antonio"]}, {"label": "Delmiro Villar y familia", "members": ["Mery Barrios", "Delmiro Villar", "Santiago Villar", "Luis Guillermo Villar"]}, {"label": "Eduardo Ávila y esposa", "members": ["Irma Pineda", "Eduardo Ávila"]}, {"label": "Rocío Ávila y familia", "members": ["Rocío Ávila", "Nicolás Ríos", "Natalia Ríos"]}, {"label": "Carolina Ávila y familia", "members": ["Carolina Ávila", "Alejandro Villa", "Diego Bonilla", "Gabriel Villa"]}, {"label": "Sandra Cardozo y familia", "members": ["Sandra Cardozo", "Santiago Ávila", "Laura Ávila"]}, {"label": "Hernán Madrigal y familia", "members": ["Hernán Madrigal", "Andrés Felipe Madrigal", "Mateo Madrigal"]}, {"label": "Jaime Gacharná y esposa", "members": ["Diana Madrigal", "Jaime Gacharná"]}, {"label": "Mónica Madrigal y familia", "members": ["Mónica Madrigal", "Jaime Madrigal", "Mariana Madrigal"]}, {"label": "Ángela Gacharná y familia", "members": ["Ángela Gacharná", "Andrés Gacharná", "Joaco Gacharná", "Moma Gacharná"]}, {"label": "Jaimito Gacharná y prometida", "members": ["Jaime Gacharná Jr.", "Eva Gabarrón"]}, {"label": "Sara Madrigal y familia", "members": ["Sara Madrigal", "Brandon Madrigal"]}, {"label": "Andrés Therán", "members": ["Andrés Therán", "Adriana Díaz"]}, {"label": "Daniela Pérez y esposo", "members": ["Daniela Pérez", "Shasham Patil"]}, {"label": "Adriana Pineda e hijo", "members": ["Adriana Pineda", "Juan José"]}, {"label": "Teddy Quintero y esposo", "members": ["Teddy Quintero", "Felipe Quintero"]}, {"label": "María Esther Madrigal y esposo", "members": ["María Esther Madrigal", "Alberto Hernández"]}]};
+const GUESTS = {"individuals":["Indira Camperos","Jesús Méndez","Nubia Dulcey","Lya Camperos","Felix Camperos","Rossana Fedele","Sofía Puentes","John Ávila","Marisol Madrigal","David Ávila","Celmira Madrigal","Ricardo Ávila","Liliana Rodriguez","Oscar Madrigal","Nataly Gacharná","Juan Daniel Madrigal","Jose Fernandez Rengifo","Juan Miguel Gómez","Kevin Llinas","Paulina Quintero","Sofía Restrepo","Bryan Álvarez","Laura Daniela García","Liz Marcela Duarte","Jeremiah Hilkiah","Victor Pedreros","Alejandra Restrepo"],"plus_one":["Angélica Ávila","Dr. Ana Gómez","Dr. Gustavo Quintero"],"families":[{"label":"Jesús Manuel Méndez y esposa","members":["Jesús Manuel Méndez","Indira Pérez Meneses"]},{"label":"Zulay Méndez y esposo","members":["Zulay Méndez","José Álvarez"]},{"label":"Javier Mejía y familia","members":["Mónica De Lazaeta","Javier Mejía","Santiago Mejía","Abrey Mejía"]},{"label":"Juan Manuel Hernández y esposa","members":["Juan Manuel Hernández","Cheilan Pantaleón"]},{"label":"Diego Borbón y esposa","members":["Paola Andrea Patiño","Diego Alejandro Borbón"]},{"label":"Laura Silvana Díaz","members":["Laura Silvana Díaz","Andrés Felipe García"]},{"label":"Paula Catalina Betancur","members":["Paula Catalina Betancur","Juan Sebastián Antonio"]},{"label":"Delmiro Villar y familia","members":["Mery Barrios","Delmiro Villar","Santiago Villar","Luis Guillermo Villar"]},{"label":"Eduardo Ávila y esposa","members":["Irma Pineda","Eduardo Ávila"]},{"label":"Rocío Ávila y familia","members":["Rocío Ávila","Nicolás Ríos","Natalia Ríos"]},{"label":"Carolina Ávila y familia","members":["Carolina Ávila","Alejandro Villa","Diego Bonilla","Gabriel Villa"]},{"label":"Sandra Cardozo y familia","members":["Sandra Cardozo","Santiago Ávila","Laura Ávila"]},{"label":"Hernán Madrigal y familia","members":["Hernán Madrigal","Andrés Felipe Madrigal","Mateo Madrigal"]},{"label":"Jaime Gacharná y esposa","members":["Diana Madrigal","Jaime Gacharná"]},{"label":"Mónica Madrigal y familia","members":["Mónica Madrigal","Jaime Madrigal","Mariana Madrigal"]},{"label":"Ángela Gacharná y familia","members":["Ángela Gacharná","Andrés Gacharná","Joaco Gacharná","Moma Gacharná"]},{"label":"Jaimito Gacharná y prometida","members":["Jaime Gacharná Jr.","Eva Gabarrón"]},{"label":"Sara Madrigal y familia","members":["Sara Madrigal","Brandon Madrigal"]},{"label":"Andrés Therán","members":["Andrés Therán","Adriana Díaz"]},{"label":"Daniela Pérez y esposo","members":["Daniela Pérez","Shasham Patil"]},{"label":"Adriana Pineda e hijo","members":["Adriana Pineda","Juan José"]},{"label":"Teddy Quintero y esposo","members":["Teddy Quintero","Felipe Quintero"]},{"label":"María Esther Madrigal y esposo","members":["María Esther Madrigal","Alberto Hernández"]}]};
 
-// Flatten to searchable list
 const allOptions = [];
-GUESTS.individuals.forEach(name => {
-  allOptions.push({ label: name, type: 'individual', members: null, plusOne: false });
-});
-GUESTS.plus_one.forEach(name => {
-  allOptions.push({ label: name, type: 'individual', members: null, plusOne: true });
-});
-GUESTS.families.forEach(f => {
-  allOptions.push({ label: f.label, type: 'family', members: f.members, plusOne: false });
-});
+GUESTS.individuals.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:false}));
+GUESTS.plus_one.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:true}));
+GUESTS.families.forEach(f => allOptions.push({label:f.label,type:'family',members:f.members,plusOne:false}));
 
-// ── SEARCH ──
 const searchEl = document.getElementById('guest-search');
 const dropdown = document.getElementById('dropdown');
-let selectedGuest = null;
 
-function normalize(str) {
-  return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-}
+function normalize(str){return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
 
-searchEl.addEventListener('input', () => {
-  const q = normalize(searchEl.value.trim());
-  if(q.length < 2) { dropdown.classList.remove('open'); dropdown.innerHTML=''; return; }
-  const matches = allOptions.filter(g => normalize(g.label).includes(q)).slice(0, 12);
-  if(!matches.length) { dropdown.classList.remove('open'); dropdown.innerHTML=''; return; }
-  dropdown.innerHTML = matches.map((g, i) => {
-    const sub = g.type === 'family' ? `<div class="dd-sub">${g.members.join(', ')}</div>` : '';
-    return `<div class="dd-item" onclick="selectGuest(${i}, ${JSON.stringify(g).replace(/"/g,'&quot;')})">
-      <div class="dd-name">${g.label}</div>${sub}
-    </div>`;
+searchEl.addEventListener('input',()=>{
+  const q=normalize(searchEl.value.trim());
+  if(q.length<2){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
+  const matches=allOptions.filter(g=>normalize(g.label).includes(q)).slice(0,12);
+  if(!matches.length){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
+  dropdown.innerHTML=matches.map((g,i)=>{
+    const sub=g.type==='family'?`<div class="dd-sub">${g.members.join(', ')}</div>`:'';
+    return `<div class="dd-item" onclick='selectGuest(${JSON.stringify(g).replace(/'/g,"&#39;")})'><div class="dd-name">${g.label}</div>${sub}</div>`;
   }).join('');
   dropdown.classList.add('open');
 });
 
-document.addEventListener('click', e => {
-  if(!e.target.closest('#search-wrap')) dropdown.classList.remove('open');
+// Prevent page jump on mobile when keyboard opens
+searchEl.addEventListener('focus',()=>{
+  setTimeout(()=>searchEl.scrollIntoView({behavior:'smooth',block:'center'}),300);
 });
 
-function selectGuest(_, guest) {
-  selectedGuest = guest;
+document.addEventListener('click',e=>{if(!e.target.closest('#search-wrap'))dropdown.classList.remove('open');});
+
+function selectGuest(guest){
   dropdown.classList.remove('open');
-  searchEl.value = guest.label;
-
-  document.getElementById('f-guest-name').value = guest.label;
-  document.getElementById('f-guest-type').value = guest.type;
-  document.getElementById('panel-title').textContent = guest.label;
-
-  // Family members
-  const memSec = document.getElementById('members-section');
-  const memList = document.getElementById('members-list');
-  if(guest.type === 'family' && guest.members) {
-    memList.innerHTML = guest.members.map(m =>
-      `<label class="member-check">
-        <input type="checkbox" name="miembros" value="${m}" checked/>
-        <span>${m}</span>
-      </label>`
-    ).join('');
-    memSec.style.display = 'block';
-  } else {
-    memSec.style.display = 'none';
-    memList.innerHTML = '';
-  }
-
-  // Plus one
-  document.getElementById('plus-section').style.display = guest.plusOne ? 'block' : 'none';
-  document.getElementById('plus-name-wrap').style.display = 'none';
-  document.querySelectorAll('[name=plus_one]').forEach(r => r.checked = false);
-
-  document.getElementById('extra-fields').style.display = 'block';
-  document.getElementById('guest-panel').style.display = 'block';
-  document.getElementById('search-wrap').style.display = 'none';
+  searchEl.value=guest.label;
+  document.getElementById('f-guest-name').value=guest.label;
+  document.getElementById('f-guest-type').value=guest.type;
+  document.getElementById('panel-title').textContent=guest.label;
+  const memSec=document.getElementById('members-section');
+  const memList=document.getElementById('members-list');
+  if(guest.type==='family'&&guest.members){
+    memList.innerHTML=guest.members.map(m=>`<label class="member-check"><input type="checkbox" name="miembros" value="${m}" checked/><span>${m}</span></label>`).join('');
+    memSec.style.display='block';
+  } else {memSec.style.display='none';memList.innerHTML='';}
+  document.getElementById('plus-section').style.display=guest.plusOne?'block':'none';
+  document.getElementById('plus-name-wrap').style.display='none';
+  document.querySelectorAll('[name=plus_one]').forEach(r=>r.checked=false);
+  document.getElementById('extra-fields').style.display='block';
+  document.getElementById('guest-panel').style.display='block';
+  document.getElementById('search-wrap').style.display='none';
 }
 
-function resetSearch() {
-  selectedGuest = null;
-  searchEl.value = '';
-  document.getElementById('guest-panel').style.display = 'none';
-  document.getElementById('search-wrap').style.display = 'block';
-  document.getElementById('extra-fields').style.display = 'none';
-  document.querySelectorAll('[name=asistencia]').forEach(r => r.checked = false);
+function resetSearch(){
+  searchEl.value='';
+  document.getElementById('guest-panel').style.display='none';
+  document.getElementById('search-wrap').style.display='block';
+  document.getElementById('extra-fields').style.display='none';
+  document.querySelectorAll('[name=asistencia]').forEach(r=>r.checked=false);
 }
 
-// Plus one toggle
-document.getElementById('plus-si').addEventListener('change', () => {
-  document.getElementById('plus-name-wrap').style.display = 'block';
-});
-document.getElementById('plus-no').addEventListener('change', () => {
-  document.getElementById('plus-name-wrap').style.display = 'none';
-});
+document.getElementById('plus-si').addEventListener('change',()=>{document.getElementById('plus-name-wrap').style.display='block';});
+document.getElementById('plus-no').addEventListener('change',()=>{document.getElementById('plus-name-wrap').style.display='none';});
 
-// ── FORM SUBMIT → email via mailto (Formspree alternative: just change action) ──
-document.getElementById('rsvp-form').addEventListener('submit', async function(e) {
+document.getElementById('rsvp-form').addEventListener('submit',async function(e){
   e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  btn.textContent = 'Enviando…'; btn.disabled = true;
-
-  const fd = new FormData(this);
-
-  // Collect checked members
-  const members = [...this.querySelectorAll('[name=miembros]:checked')].map(c=>c.value);
-  if(members.length) fd.set('miembros', members.join(', '));
-
-  // Build payload for Formspree
-  const payload = {};
-  for(const [k,v] of fd.entries()) payload[k]=v;
-
-  try {
-    const res = await fetch('https://formspree.io/f/paolavalentinamc', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    // Show success regardless (Formspree needs real form ID; fallback to mailto)
-    document.getElementById('rsvp-main').style.display = 'none';
-    document.getElementById('rsvp-ok').style.display = 'block';
-  } catch {
-    // Fallback: open email
-    const body = Object.entries(payload).map(([k,v])=>`${k}: ${v}`).join('%0A');
-    window.location.href = `mailto:paolavalentinamc@gmail.com?subject=RSVP - ${payload.invitado}&body=${body}`;
-    btn.textContent = 'Enviar confirmación'; btn.disabled = false;
+  const btn=this.querySelector('button[type=submit]');
+  btn.textContent='Enviando…';btn.disabled=true;
+  const fd=new FormData(this);
+  const members=[...this.querySelectorAll('[name=miembros]:checked')].map(c=>c.value);
+  if(members.length)fd.set('miembros',members.join(', '));
+  const payload={};
+  for(const[k,v]of fd.entries())payload[k]=v;
+  try{
+    const res=await fetch('https://formspree.io/f/paolavalentinamc',{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});
+    document.getElementById('rsvp-main').style.display='none';
+    document.getElementById('rsvp-ok').style.display='block';
+  }catch{
+    const body=Object.entries(payload).map(([k,v])=>`${k}: ${v}`).join('%0A');
+    window.location.href=`mailto:paolavalentinamc@gmail.com?subject=RSVP - ${payload.invitado}&body=${body}`;
+    btn.textContent='Enviar confirmación';btn.disabled=false;
   }
 });
 
-// ── COUNTDOWN ──
-function tick() {
-  const d = new Date('2026-07-17T16:00:00-05:00') - new Date();
-  if(d<=0) return;
-  const p = n => String(n).padStart(2,'0');
-  document.getElementById('cd-days').textContent  = p(Math.floor(d/86400000));
-  document.getElementById('cd-hours').textContent = p(Math.floor((d%86400000)/3600000));
-  document.getElementById('cd-mins').textContent  = p(Math.floor((d%3600000)/60000));
-  document.getElementById('cd-secs').textContent  = p(Math.floor((d%60000)/1000));
+function tick(){
+  const d=new Date('2026-07-17T16:00:00-05:00')-new Date();
+  if(d<=0)return;
+  const p=n=>String(n).padStart(2,'0');
+  document.getElementById('cd-days').textContent=p(Math.floor(d/86400000));
+  document.getElementById('cd-hours').textContent=p(Math.floor((d%86400000)/3600000));
+  document.getElementById('cd-mins').textContent=p(Math.floor((d%3600000)/60000));
+  document.getElementById('cd-secs').textContent=p(Math.floor((d%60000)/1000));
 }
-tick(); setInterval(tick, 1000);
+tick();setInterval(tick,1000);
 
-// ── SCROLL REVEAL ──
-const obs = new IntersectionObserver(es => es.forEach(e => {
-  if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-}), {threshold:.1});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// ── FAQ ──
-function toggleFaq(btn) {
-  const item = btn.closest('.faq-item'), ans = item.querySelector('.faq-a'), open = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
-  if(!open) { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item'),ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
 }
-
-// ── NAV ──
-function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
-function closeMenu()  { document.getElementById('navLinks').classList.remove('open'); }
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+function closeMenu(){document.getElementById('navLinks').classList.remove('open');}
 </script>
 </body>
 </html>
