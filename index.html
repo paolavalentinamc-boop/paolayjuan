@@ -245,13 +245,13 @@
 <nav>
   <div class="nav-logo"><img src="logo.png" alt="P&J"/></div>
   <ul class="nav-links" id="navLinks">
+    <li><a href="#rsvp" onclick="closeMenu()">RSVP</a></li>
     <li><a href="#historia" onclick="closeMenu()">Historia</a></li>
     <li><a href="#cronograma" onclick="closeMenu()">Cronograma</a></li>
     <li><a href="#lugar" onclick="closeMenu()">Lugar</a></li>
     <li><a href="#dresscode" onclick="closeMenu()">Dress code</a></li>
     <li><a href="#regalos" onclick="closeMenu()">Regalos</a></li>
     <li><a href="#qa" onclick="closeMenu()">Q&A</a></li>
-    <li><a href="#rsvp" onclick="closeMenu()">RSVP</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
@@ -321,7 +321,7 @@
             </div>
           </div>
           <div id="members-section">
-            <span class="members-label">¿Quiénes de tu familia asistirán?</span>
+            <span class="members-label">¿Quiénes asistirán?</span>
             <div class="members-list" id="members-list"></div>
           </div>
           <div id="plus-section">
@@ -375,7 +375,7 @@
           <div class="milestone"><span class="m-year">2022</span><div><div class="m-title">Un match que lo cambió todo</div><p class="m-text">Nos conocimos en Bumble y una conversación se convirtió en algo que ninguno esperaba.</p></div></div>
           <div class="milestone"><span class="m-year">2023</span><div><div class="m-title">Inseparables</div><p class="m-text">Viajamos juntos, exploramos el mundo y descubrimos que queríamos seguir haciéndolo. Sí, incluso con episodios de gastroenteritis en la carretera...</p></div></div>
           <div class="milestone"><span class="m-year">2024</span><div><div class="m-title">Un mismo hogar</div><p class="m-text">Dimos el paso de vivir juntos y aprendimos lo que significa construir una vida en común.</p></div></div>
-          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">El gran sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola.</p></div></div>
+          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">La Gran Manzana, y El Gran Sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola.</p></div></div>
         </div>
       </div>
     </div>
@@ -391,7 +391,7 @@
     <div class="crono-block reveal">
       <div class="tl-grid">
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>3:00 pm</div><div class="tl-event">Bienvenida</div><p class="tl-desc">Llegada y recibimiento. Un espacio para reencontrarse antes de que empiece la celebración.</p></div>
-        <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>4:00 pm</div><div class="tl-event">Ceremonia</div><p class="tl-desc">La celebración eclesiástica. Nos daremos el sí frente a Dios y y ustedes.</p></div>
+        <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>4:00 pm</div><div class="tl-event">Ceremonia</div><p class="tl-desc">La celebración eclesiástica. Nos daremos el sí frente a Dios y todos ustedes.</p></div>
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>5:00 pm</div><div class="tl-event">Cóctel</div><p class="tl-desc">Bebidas, aperitivos y el placer de celebrar juntos bajo el cielo de Bogotá.</p></div>
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>7:00 pm</div><div class="tl-event">Cena &amp; fiesta</div><p class="tl-desc">Cena, brindis, baile y todos los momentos que hacen única esta noche.</p></div>
       </div>
@@ -452,8 +452,8 @@
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div style="font-size:3rem;margin-bottom:1.5rem;">💌</div>
       <p class="regalo-msg" style="font-size:1.2rem;">El más grande.</p>
-      <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si deseas darnos un detalle, tendremos un cofre de sobres, aunque con una lluvia de sobres con todo su amor será más que suficiente.</p>
-      <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">Es por eso que también recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo. 🕊️</p>
+      <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si deseas darnos un detalle, tendremos un cofre de sobres, aunque con una lluvia de sobres con todo tu amor será más que suficiente.</p>
+      <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">Es por eso que también recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo.</p>
     </div>
   </div>
 </section>
@@ -650,6 +650,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
