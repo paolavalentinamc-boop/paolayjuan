@@ -178,9 +178,12 @@
     #members-section{margin-bottom:2rem;display:none;}
     .members-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,250,245,.5);display:block;margin-bottom:.8rem;}
     .members-list{display:flex;flex-direction:column;gap:.5rem;}
-    .member-check{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);cursor:pointer;transition:background .2s;}
+    .member-check{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);cursor:pointer;transition:all .2s;}
     .member-check:hover{background:rgba(255,255,255,.1);}
-    .member-check input[type=checkbox]{width:14px;height:14px;accent-color:#fff;cursor:pointer;flex-shrink:0;}
+    .member-check input[type=checkbox]{width:16px;height:16px;accent-color:var(--burg);cursor:pointer;flex-shrink:0;}
+    .member-check:has(input:checked){background:rgba(255,255,255,.15);border-color:rgba(253,250,245,.5);}
+    .member-check:has(input:not(:checked)){background:rgba(0,0,0,.15);border-color:rgba(253,250,245,.08);}
+    .member-check:has(input:not(:checked)) span{color:rgba(253,250,245,.35);text-decoration:line-through;}
     .member-check span{font-size:.85rem;color:rgba(253,250,245,.8);}
 
     /* Plus one */
