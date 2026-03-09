@@ -569,7 +569,11 @@ document.getElementById('rsvp-form').addEventListener('submit',async function(e)
   btn.textContent='Enviando…';btn.disabled=true;
   const fd=new FormData(this);
   const members=[...this.querySelectorAll('[name=miembros]:checked')].map(c=>c.value);
-  if(members.length)fd.set('miembros',members.join(', '));
+const allMembers=[...this.querySelectorAll('[name=miembros]')].map(c=>c.value);
+if(allMembers.length){
+  fd.set('miembros_confirmados', members.join(', ') || 'Ninguno');
+  fd.set('miembros_no_van', allMembers.filter(m=>!members.includes(m)).join(', ') || 'Ninguno');
+}
   const payload={};
   for(const[k,v]of fd.entries())payload[k]=v;
   try{
@@ -668,6 +672,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
