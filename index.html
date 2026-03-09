@@ -498,7 +498,25 @@ function normalize(str){return str.toLowerCase().normalize('NFD').replace(/[\u03
 searchEl.addEventListener('input',()=>{
   const q=normalize(searchEl.value.trim());
   if(q.length<2){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
-  const matches=allOptions.filter(g=>normalize(g.label).includes(q)).slice(0,12);
+  const matches=allOptions.filter(g=>{
+    // Match label starting with query
+    if(normalize(g.label).startsWith(q)) return true;
+    // Match any word in label starting with query
+    if(normalize(g.label).split(' ').some(w=>w.startsWith(q))) return true;
+    // Match any family member name starting with query
+    if(g.members && g.members.some(m=>
+      normalize(m).startsWith(q) ||
+      normalize(m).split(' ').some(w=>w.startsWith(q))
+    )) return true;
+    return false;
+  }).sort((a,b)=>{
+    // Prioritize labels that start with query
+    const aStarts = normalize(a.label).startsWith(q);
+    const bStarts = normalize(b.label).startsWith(q);
+    if(aStarts && !bStarts) return -1;
+    if(!aStarts && bStarts) return 1;
+    return 0;
+  }).slice(0,12);
   if(!matches.length){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
   dropdown.innerHTML=matches.map((g,i)=>{
     const sub=g.type==='family'?`<div class="dd-sub">${g.members.join(', ')}</div>`:'';
@@ -650,6 +668,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
