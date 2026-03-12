@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+<head><!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Juanpa & Pao</title>
+  <title>Juanpa & Pao 💍</title>
   <!-- Favicon emoji -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -245,13 +247,13 @@
 <nav>
   <div class="nav-logo"><img src="logo.png" alt="P&J"/></div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#rsvp" onclick="closeMenu()">RSVP</a></li>
     <li><a href="#historia" onclick="closeMenu()">Historia</a></li>
     <li><a href="#cronograma" onclick="closeMenu()">Cronograma</a></li>
     <li><a href="#lugar" onclick="closeMenu()">Lugar</a></li>
     <li><a href="#dresscode" onclick="closeMenu()">Dress code</a></li>
     <li><a href="#regalos" onclick="closeMenu()">Regalos</a></li>
     <li><a href="#qa" onclick="closeMenu()">Q&A</a></li>
+    <li><a href="#rsvp" onclick="closeMenu()">RSVP</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
@@ -288,7 +290,7 @@
 <!-- RSVP -->
 <section id="rsvp">
   <div class="inner">
-    <span class="stag reveal">RSVP</span>
+    <span class="stag reveal">Confirmación</span>
     <h2 class="stitle reveal">Confirma tu asistencia</h2>
     <div class="rule reveal"></div>
     <p class="rsvp-sub reveal">Responde antes del 15 de mayo de 2026.</p>
@@ -316,13 +318,25 @@
           <div class="att-group">
             <span class="att-label-top">¿Asistirás?</span>
             <div class="att-options">
-  <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="document.getElementById('extra-fields').style.display='block';document.getElementById('members-section').style.display=document.getElementById('f-guest-type').value==='family'?'block':'none';"/><label for="att-si">Sí, asistiré 🥂</label></div>
-  <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="document.getElementById('extra-fields').style.display='none';document.getElementById('members-section').style.display='none';"/><label for="att-no">No podré asistir</label></div>
-</div>
+              <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="
+                document.getElementById('members-section').style.display=currentGuest&&currentGuest.type==='family'?'block':'none';
+                document.getElementById('plus-section').style.display=currentGuest&&currentGuest.plusOne?'block':'none';
+                document.getElementById('f-food').closest('.fg').style.display='flex';
+                document.getElementById('f-song').closest('.fg').style.display='flex';
+                document.getElementById('extra-fields').style.display='flex';
+              "/><label for="att-si">Sí, asistiré 🥂</label></div>
+              <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="
+                document.getElementById('members-section').style.display='none';
+                document.getElementById('plus-section').style.display='none';
+                document.getElementById('f-food').closest('.fg').style.display='none';
+                document.getElementById('f-song').closest('.fg').style.display='none';
+                document.getElementById('extra-fields').style.display='flex';
+              "/><label for="att-no">No podré asistir</label></div>
+            </div>
           </div>
           <div id="members-section">
-<span class="members-label">¿Quiénes asistirán?</span>
-<p style="font-size:.75rem;color:rgba(253,250,245,.45);font-style:italic;font-family:var(--font-s);margin-bottom:1rem;line-height:1.7;">👇 Selecciona quiénes asistirán. Los demás integrantes no necesitan llenar este formulario por separado.</p>            <div class="members-list" id="members-list"></div>
+            <span class="members-label">¿Quiénes de tu familia asistirán?</span>
+            <div class="members-list" id="members-list"></div>
           </div>
           <div id="plus-section">
             <span class="plus-label">¿Llevas acompañante?</span>
@@ -369,13 +383,13 @@
         <div class="story-body reveal">
           <p>Todo comenzó con un match en Bumble, sí, estamos aquí gracias a una app de citas, y lo que parecía ser una conversación más entre millones, terminó siendo el inicio de algo que nos cambió la vida por completo.</p>
           <p>Fue amor a primera vista, aunque nos tomó un tiempo admitirlo. Casi sin darnos cuenta, nos volvimos inseparables: viajamos juntos, construimos una vida en común, compartimos un hogar y hasta un perro, Coco Vicente.</p>
-          <p>Hoy, después de 4 años de crecimiento, risas y vivir tantas etapas, queremos decirle sí al resto de nuestra historia frente a ustedes y frente a Dios.</p>
+          <p>Hoy, después de 4 años de crecimiento, risas y vivir tantas etapas juntos, queremos decirle sí al resto de nuestra historia frente a ustedes y frente a Dios.</p>
         </div>
         <div class="milestones reveal">
           <div class="milestone"><span class="m-year">2022</span><div><div class="m-title">Un match que lo cambió todo</div><p class="m-text">Nos conocimos en Bumble y una conversación se convirtió en algo que ninguno esperaba.</p></div></div>
-          <div class="milestone"><span class="m-year">2023</span><div><div class="m-title">Inseparables</div><p class="m-text">Viajamos juntos, exploramos el mundo y descubrimos que queríamos seguir haciéndolo. Sí, incluso con episodios de gastroenteritis en la carretera...</p></div></div>
+          <div class="milestone"><span class="m-year">2023</span><div><div class="m-title">Inseparables</div><p class="m-text">Viajamos juntos, exploramos el mundo y descubrimos que queríamos seguir haciéndolo.</p></div></div>
           <div class="milestone"><span class="m-year">2024</span><div><div class="m-title">Un mismo hogar</div><p class="m-text">Dimos el paso de vivir juntos y aprendimos lo que significa construir una vida en común.</p></div></div>
-          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">La Gran Manzana, y El Gran Sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola.</p></div></div>
+          <div class="milestone"><span class="m-year">2025</span><div><div class="m-title">El gran sí</div><p class="m-text">Nueva York siempre ha sido un lugar muy especial para nosotros, y el 28 de noviembre del 2025 lo fue aún más cuando, en el Top of the Rock, Juan le pidió matrimonio a Paola.</p></div></div>
         </div>
       </div>
     </div>
@@ -391,7 +405,7 @@
     <div class="crono-block reveal">
       <div class="tl-grid">
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>3:00 pm</div><div class="tl-event">Bienvenida</div><p class="tl-desc">Llegada y recibimiento. Un espacio para reencontrarse antes de que empiece la celebración.</p></div>
-        <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>4:00 pm</div><div class="tl-event">Ceremonia</div><p class="tl-desc">La celebración eclesiástica. Nos daremos el sí frente a Dios y todos ustedes.</p></div>
+        <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>4:00 pm</div><div class="tl-event">Ceremonia</div><p class="tl-desc">La celebración eclesiástica. Paola y Juan se dan el sí frente a Dios y sus personas más queridas.</p></div>
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>5:00 pm</div><div class="tl-event">Cóctel</div><p class="tl-desc">Bebidas, aperitivos y el placer de celebrar juntos bajo el cielo de Bogotá.</p></div>
         <div class="tl-item"><div class="tl-time"><span class="tl-dot"></span>7:00 pm</div><div class="tl-event">Cena &amp; fiesta</div><p class="tl-desc">Cena, brindis, baile y todos los momentos que hacen única esta noche.</p></div>
       </div>
@@ -426,7 +440,7 @@
     <div class="rule reveal"></div>
     <div class="dc-grid reveal">
       <div>
-        <p class="dc-msg">Esta es <em>nuestra noche</em> — y también es la tuya.<br/><br/>Queremos que brilles. Que llegues con tu mejor outfit y que te sientas tan especial como nosotros. Sólo pedimos respetar dos colores que guardamos para nosotros.</p>
+        <p class="dc-msg">Esta es <em>nuestra noche</em> — y también es la de ustedes.<br/><br/>Queremos que brillen. Que lleguen con su mejor outfit y que se sientan tan especiales como nosotros. Sólo pedimos respetar dos colores que guardamos para nosotros.</p>
         <div class="dc-tag-box"><div><div class="dc-tag-label">Etiqueta</div><div class="dc-tag-name">Gala</div><div style="margin-top:.8rem;font-size:.78rem;color:rgba(253,250,245,.55);font-family:var(--font-s);font-style:italic;line-height:1.7;">🤵 Esmoquin &nbsp;·&nbsp; 👗 Vestido largo</div></div></div>
       </div>
       <div>
@@ -437,7 +451,7 @@
             <div class="color-row"><div class="swatch" style="background:#6B1E2E;"></div><div class="color-label"><strong>Borgoña</strong>Es nuestro color de la noche.</div></div>
           </div>
         </div>
-        <p style="color:rgba(253,250,245,.6);font-size:.82rem;margin-top:1.5rem;line-height:1.85;font-style:italic;font-family:var(--font-s);">Fuera de eso, ¡todo vale! Tonos oscuros, tierra, pasteles — cualquier color es bienvenido.</p>
+        <p style="color:rgba(253,250,245,.6);font-size:.82rem;margin-top:1.5rem;line-height:1.85;font-style:italic;font-family:var(--font-s);">Fuera de eso, ¡todo vale! Tonos oscuros, colores joya, tierra, pasteles — cualquier color es bienvenido.</p>
       </div>
     </div>
   </div>
@@ -447,13 +461,13 @@
 <section id="regalos">
   <div class="inner-wide">
     <span class="stag reveal">Regalos</span>
-    <h2 class="stitle reveal">Tu presencia es nuestro regalo</h2>
+    <h2 class="stitle reveal">Su presencia es nuestro regalo</h2>
     <div class="rule reveal"></div>
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div style="font-size:3rem;margin-bottom:1.5rem;">💌</div>
-      <p class="regalo-msg" style="font-size:1.2rem;">El más grande.</p>
-      <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si deseas darnos un detalle, tendremos un cofre de sobres, aunque con una lluvia de sobres con todo tu amor será más que suficiente.</p>
-      <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">Es por eso que también recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo.</p>
+      <p class="regalo-msg" style="font-size:1.2rem;">Su presencia es nuestro regalo más grande.</p>
+      <p class="regalo-msg" style="margin-top:1.5rem;font-size:1rem;color:var(--muted);">Si desean hacernos un detalle, tendremos un cofre de sobres esperándolos — una lluvia de sobres con todo su amor será más que suficiente.</p>
+      <p class="regalo-msg" style="margin-top:1rem;font-size:1rem;color:var(--muted);">También recibimos con el corazón abierto cartas con buenos deseos, bendiciones, consejos y tips para este nuevo capítulo. 🕊️</p>
     </div>
   </div>
 </section>
@@ -465,8 +479,8 @@
     <h2 class="stitle reveal">Todo lo que necesitas saber</h2>
     <div class="rule reveal"></div>
     <div class="faq-list reveal">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Cómo llego a El Retiro de San Juan?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>El lugar está ubicado a la salida de la zona norte de Bogotá. En Waze lo puedes encontrar como El Retiro de San Juan. Si necesitas pedir transporte, te recomendamos usar Uber o Didi. En caso de que vayas en carro, el venue cuenta con parqueadero. También te sugerimos salir con tiempo, ya que en Bogotá suele haber tráfico bastante pesado.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Hasta qué fecha debo confirmar?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Necesitamos tu confirmación antes del <strong>15 de mayo de 2026</strong>. En caso de no recibir tu respuesta a tiempo, entenderemos que no podrás acompañarnos.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Cómo llego a El Retiro de San Juan?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>El lugar está ubicado a la salida de la zona norte de Bogotá. En Waze lo pueden encontrar como El Retiro de San Juan. Si necesitan pedir transporte, les recomendamos usar Uber o Didi. En caso de que vayan en carro, el venue cuenta con parqueadero. También les sugerimos salir con tiempo, ya que en Bogotá suele haber tráfico bastante pesado.</p></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Hasta qué fecha debo confirmar?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Necesitamos tu confirmación antes del <strong>15 de mayo de 2026</strong>. En caso de no recibir su respuesta a tiempo, entenderemos que no podrán acompañarnos.</p></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Habrá opciones vegetarianas o para alergias?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Sí. En el formulario de RSVP puedes indicarnos tu restricción alimentaria y nos aseguraremos de que tengas opciones disponibles.</p></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Puedo tomar fotos durante la ceremonia?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Tendremos fotógrafo y videógrafo profesional capturando todo. Durante la ceremonia pedimos guardar el celular para que todos estemos verdaderamente presentes.</p></div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>¿Habrá transporte organizado?</span><span class="faq-icon">+</span></button><div class="faq-a"><p>Por el momento no contamos con transporte organizado. Te sugerimos coordinar con otros invitados.</p></div></div>
@@ -483,13 +497,14 @@
 </footer>
 
 <script>
-const GUESTS = {"individuals":["Indira Camperos","Jesús Méndez","Nubia Dulcey","Lya Camperos","Felix Camperos","Rossana Fedele","Sofía Puentes","John Ávila","Marisol Madrigal","David Ávila","Celmira Madrigal","Ricardo Ávila","Liliana Rodriguez","Oscar Madrigal","Nataly Gacharná","Juan Daniel Madrigal","Jose Fernandez Rengifo","Juan Miguel Gómez","Kevin Llinas","Paulina Quintero","Sofía Restrepo","Bryan Álvarez","Laura Daniela García","Liz Marcela Duarte","Jeremiah Hilkiah","Victor Pedreros","Alejandra Restrepo","Morella Mendez"],"plus_one":["Angélica Ávila","Dr. Ana Gómez","Dr. Gustavo Quintero"],"families":[{"label":"Jesús Manuel Méndez y esposa","members":["Jesús Manuel Méndez","Indira Pérez Meneses"]},{"label":"Zulay Méndez y esposo","members":["Zulay Méndez","José Álvarez"]},{"label":"Javier Mejía y familia","members":["Mónica De Lazaeta","Javier Mejía","Santiago Mejía","Abrey Mejía"]},{"label":"Juan Manuel Hernández y esposa","members":["Juan Manuel Hernández","Cheilan Pantaleón"]},{"label":"Diego Borbón y esposa","members":["Paola Andrea Patiño","Diego Alejandro Borbón"]},{"label":"Laura Silvana Díaz","members":["Laura Silvana Díaz","Andrés Felipe García"]},{"label":"Paula Catalina Betancur","members":["Paula Catalina Betancur","Juan Sebastián Antonio"]},{"label":"Delmiro Villar y familia","members":["Mery Barrios","Delmiro Villar","Santiago Villar","Luis Guillermo Villar"]},{"label":"Eduardo Ávila y esposa","members":["Irma Pineda","Eduardo Ávila"]},{"label":"Rocío Ávila y familia","members":["Rocío Ávila","Nicolás Ríos","Natalia Ríos"]},{"label":"Carolina Ávila y familia","members":["Carolina Ávila","Alejandro Villa","Diego Bonilla","Gabriel Villa"]},{"label":"Sandra Cardozo y familia","members":["Sandra Cardozo","Santiago Ávila","Laura Ávila"]},{"label":"Hernán Madrigal y familia","members":["Hernán Madrigal","Andrés Felipe Madrigal","Mateo Madrigal"]},{"label":"Jaime Gacharná y esposa","members":["Diana Madrigal","Jaime Gacharná"]},{"label":"Mónica Madrigal y familia","members":["Mónica Madrigal","Jaime Trujillo","Mariana Trujillo"]},{"label":"Ángela Gacharná y familia","members":["Ángela Gacharná","Andrés Peña","Joaco Peña","Moma Peña"]},{"label":"Jaimito Gacharná y prometida","members":["Jaime Gacharná Jr.","Eva Gabarrón"]},{"label":"Sara Madrigal y familia","members":["Sara Madrigal","Brandon Orozco"]},{"label":"Andrés Therán","members":["Andrés Therán","Adriana Díaz"]},{"label":"Daniela Pérez y esposo","members":["Daniela Pérez","Shasham Patil"]},{"label":"Adriana Pineda e hijo","members":["Adriana","Juan José"]},{"label":"Teddy Quintero y esposo","members":["Teddy","Felipe"]},{"label":"María Esther Madrigal y esposo","members":["María Esther Madrigal","Alberto Hernández"]}]};
+const GUESTS = {"individuals":["Indira Camperos","Jesús Méndez","Nubia Dulcey","Lya Camperos","Felix Camperos","Rossana Fedele","Sofía Puentes","John Ávila","Marisol Madrigal","David Ávila","Celmira Madrigal","Ricardo Ávila","Liliana Rodriguez","Oscar Madrigal","Nataly Gacharná","Juan Daniel Madrigal","Jose Fernandez Rengifo","Juan Miguel Gómez","Kevin Llinas","Paulina Quintero","Sofía Restrepo","Bryan Álvarez","Laura Daniela García","Liz Marcela Duarte","Jeremiah Hilkiah","Victor Pedreros","Alejandra Restrepo","Morella Mendez"],"plus_one":["Angélica Ávila","Dr. Ana Gómez","Dr. Gustavo Quintero"],"families":[{"label":"Jesús Manuel Méndez y esposa","members":["Jesús Manuel Méndez","Indira Pérez Meneses"]},{"label":"Zulay Méndez y esposo","members":["Zulay Méndez","José Álvarez"]},{"label":"Javier Mejía y familia","members":["Mónica De Lazaeta","Javier Mejía","Santiago Mejía","Abrey Mejía"]},{"label":"Juan Manuel Hernández y esposa","members":["Juan Manuel Hernández","Cheilan Pantaleón"]},{"label":"Diego Borbón y esposa","members":["Paola Andrea Patiño","Diego Alejandro Borbón"]},{"label":"Laura Silvana Díaz","members":["Laura Silvana Díaz","Andrés Felipe García"]},{"label":"Paula Catalina Betancur","members":["Paula Catalina Betancur","Juan Sebastián Antonio"]},{"label":"Delmiro Villar y familia","members":["Mery Barrios","Delmiro Villar","Santiago Villar","Luis Guillermo Villar"]},{"label":"Eduardo Ávila y esposa","members":["Irma Pineda","Eduardo Ávila"]},{"label":"Rocío Ávila y familia","members":["Rocío Ávila","Nicolás Ríos","Natalia Ríos"]},{"label":"Carolina Ávila y familia","members":["Carolina Ávila","Alejandro Villa","Diego Bonilla","Gabriel Villa"]},{"label":"Sandra Cardozo y familia","members":["Sandra Cardozo","Santiago Ávila","Laura Ávila"]},{"label":"Hernán Madrigal y familia","members":["Hernán Madrigal","Andrés Felipe Madrigal","Mateo Madrigal"]},{"label":"Jaime Gacharná y esposa","members":["Diana Madrigal","Jaime Gacharná"]},{"label":"Mónica Madrigal y familia","members":["Mónica Madrigal","Jaime Madrigal","Mariana Madrigal"]},{"label":"Ángela Gacharná y familia","members":["Ángela Gacharná","Andrés Gacharná","Joaco Gacharná","Moma Gacharná"]},{"label":"Jaimito Gacharná y prometida","members":["Jaime Gacharná Jr.","Eva Gabarrón"]},{"label":"Sara Madrigal y familia","members":["Sara Madrigal","Brandon Madrigal"]},{"label":"Andrés Therán","members":["Andrés Therán","Adriana Díaz"]},{"label":"Daniela Pérez y esposo","members":["Daniela Pérez","Shasham Patil"]},{"label":"Adriana Pineda e hijo","members":["Adriana Pineda","Juan José"]},{"label":"Teddy Quintero y esposo","members":["Teddy Quintero","Felipe Quintero"]},{"label":"María Esther Madrigal y esposo","members":["María Esther Madrigal","Alberto Hernández"]}]};
 
 const allOptions = [];
 GUESTS.individuals.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:false}));
 GUESTS.plus_one.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:true}));
 GUESTS.families.forEach(f => allOptions.push({label:f.label,type:'family',members:f.members,plusOne:false}));
 
+let currentGuest = null;
 const searchEl = document.getElementById('guest-search');
 const dropdown = document.getElementById('dropdown');
 
@@ -498,25 +513,7 @@ function normalize(str){return str.toLowerCase().normalize('NFD').replace(/[\u03
 searchEl.addEventListener('input',()=>{
   const q=normalize(searchEl.value.trim());
   if(q.length<2){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
-  const matches=allOptions.filter(g=>{
-    // Match label starting with query
-    if(normalize(g.label).startsWith(q)) return true;
-    // Match any word in label starting with query
-    if(normalize(g.label).split(' ').some(w=>w.startsWith(q))) return true;
-    // Match any family member name starting with query
-    if(g.members && g.members.some(m=>
-      normalize(m).startsWith(q) ||
-      normalize(m).split(' ').some(w=>w.startsWith(q))
-    )) return true;
-    return false;
-  }).sort((a,b)=>{
-    // Prioritize labels that start with query
-    const aStarts = normalize(a.label).startsWith(q);
-    const bStarts = normalize(b.label).startsWith(q);
-    if(aStarts && !bStarts) return -1;
-    if(!aStarts && bStarts) return 1;
-    return 0;
-  }).slice(0,12);
+  const matches=allOptions.filter(g=>normalize(g.label).includes(q)).slice(0,12);
   if(!matches.length){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
   dropdown.innerHTML=matches.map((g,i)=>{
     const sub=g.type==='family'?`<div class="dd-sub">${g.members.join(', ')}</div>`:'';
@@ -547,11 +544,13 @@ function selectGuest(guest){
   document.getElementById('plus-section').style.display=guest.plusOne?'block':'none';
   document.getElementById('plus-name-wrap').style.display='none';
   document.querySelectorAll('[name=plus_one]').forEach(r=>r.checked=false);
+  document.getElementById('extra-fields').style.display='block';
   document.getElementById('guest-panel').style.display='block';
-document.getElementById('search-wrap').style.display='none';
+  document.getElementById('search-wrap').style.display='none';
 }
 
 function resetSearch(){
+  currentGuest=null;
   searchEl.value='';
   document.getElementById('guest-panel').style.display='none';
   document.getElementById('search-wrap').style.display='block';
@@ -568,11 +567,7 @@ document.getElementById('rsvp-form').addEventListener('submit',async function(e)
   btn.textContent='Enviando…';btn.disabled=true;
   const fd=new FormData(this);
   const members=[...this.querySelectorAll('[name=miembros]:checked')].map(c=>c.value);
-const allMembers=[...this.querySelectorAll('[name=miembros]')].map(c=>c.value);
-if(allMembers.length){
-  fd.set('miembros_confirmados', members.join(', ') || 'Ninguno');
-  fd.set('miembros_no_van', allMembers.filter(m=>!members.includes(m)).join(', ') || 'Ninguno');
-}
+  if(members.length)fd.set('miembros',members.join(', '));
   const payload={};
   for(const[k,v]of fd.entries())payload[k]=v;
   try{
@@ -671,13 +666,5 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
