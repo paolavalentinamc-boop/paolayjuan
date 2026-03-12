@@ -317,8 +317,8 @@
             <span class="att-label-top">¿Asistirás?</span>
             <div class="att-options">
               <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="
-                document.getElementById('members-section').style.display=currentGuest&&currentGuest.type==='family'?'block':'none';
-                document.getElementById('plus-section').style.display=currentGuest&&currentGuest.plusOne?'block':'none';
+                document.getElementById('members-section').style.display=window.currentGuest&&window.currentGuest.type==='family'?'block':'none';
+                document.getElementById('plus-section').style.display=window.currentGuest&&window.currentGuest.plusOne?'block':'none';
                 document.getElementById('f-food').closest('.fg').style.display='flex';
                 document.getElementById('f-song').closest('.fg').style.display='flex';
                 document.getElementById('extra-fields').style.display='block';
@@ -496,8 +496,9 @@
 </footer>
 
 <script>
+window.currentGuest = null;
 const GUESTS = {"individuals":["Indira Camperos","Jesús Méndez","Nubia Dulcey","Lya Camperos","Felix Camperos","Rossana Fedele","Sofía Puentes","John Ávila","Marisol Madrigal","David Ávila","Celmira Madrigal","Ricardo Ávila","Liliana Rodriguez","Oscar Madrigal","Nataly Gacharná","Juan Daniel Madrigal","Jose Fernandez Rengifo","Juan Miguel Gómez","Kevin Llinas","Paulina Quintero","Sofía Restrepo","Bryan Álvarez","Laura Daniela García","Liz Marcela Duarte","Jeremiah Hilkiah","Victor Pedreros","Alejandra Restrepo","Morella Mendez"],"plus_one":["Angélica Ávila","Dr. Ana Gómez","Dr. Gustavo Quintero"],"families":[{"label":"Jesús Manuel Méndez y esposa","members":["Jesús Manuel Méndez","Indira Pérez Meneses"]},{"label":"Zulay Méndez y esposo","members":["Zulay Méndez","José Álvarez"]},{"label":"Javier Mejía y familia","members":["Mónica De Lazaeta","Javier Mejía","Santiago Mejía","Abrey Mejía"]},{"label":"Juan Manuel Hernández y esposa","members":["Juan Manuel Hernández","Cheilan Pantaleón"]},{"label":"Diego Borbón y esposa","members":["Paola Andrea Patiño","Diego Alejandro Borbón"]},{"label":"Laura Silvana Díaz","members":["Laura Silvana Díaz","Andrés Felipe García"]},{"label":"Paula Catalina Betancur","members":["Paula Catalina Betancur","Juan Sebastián Antonio"]},{"label":"Delmiro Villar y familia","members":["Mery Barrios","Delmiro Villar","Santiago Villar","Luis Guillermo Villar"]},{"label":"Eduardo Ávila y esposa","members":["Irma Pineda","Eduardo Ávila"]},{"label":"Rocío Ávila y familia","members":["Rocío Ávila","Nicolás Ríos","Natalia Ríos"]},{"label":"Carolina Ávila y familia","members":["Carolina Ávila","Alejandro Villa","Diego Bonilla","Gabriel Villa"]},{"label":"Sandra Cardozo y familia","members":["Sandra Cardozo","Santiago Ávila","Laura Ávila"]},{"label":"Hernán Madrigal y familia","members":["Hernán Madrigal","Andrés Felipe Madrigal","Mateo Madrigal"]},{"label":"Jaime Gacharná y esposa","members":["Diana Madrigal","Jaime Gacharná"]},{"label":"Mónica Madrigal y familia","members":["Mónica Madrigal","Jaime Trujillo","Mariana Trujillo"]},{"label":"Ángela Gacharná y familia","members":["Ángela Gacharná","Andrés Peña","Joaco Peña","Moma Peña"]},{"label":"Jaimito Gacharná y prometida","members":["Jaime Gacharná Jr.","Eva Gabarrón"]},{"label":"Sara Madrigal y familia","members":["Sara Madrigal","Brandon Orozco"]},{"label":"Andrés Therán","members":["Andrés Therán","Adriana Díaz"]},{"label":"Daniela Pérez y esposo","members":["Daniela Pérez","Shasham Patil"]},{"label":"Adriana Pineda e hijo","members":["Adriana","Juan José"]},{"label":"Teddy Quintero y esposo","members":["Teddy","Felipe"]},{"label":"María Esther Madrigal y esposo","members":["María Esther Madrigal","Alberto Hernández"]}]};
-let currentGuest = null;
+
 const allOptions = [];
 GUESTS.individuals.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:false}));
 GUESTS.plus_one.forEach(name => allOptions.push({label:name,type:'individual',members:null,plusOne:true}));
@@ -512,33 +513,28 @@ searchEl.addEventListener('input',()=>{
   const q=normalize(searchEl.value.trim());
   if(q.length<2){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
   const matches=allOptions.filter(g=>{
-    // Match label starting with query
     if(normalize(g.label).startsWith(q)) return true;
-    // Match any word in label starting with query
     if(normalize(g.label).split(' ').some(w=>w.startsWith(q))) return true;
-    // Match any family member name starting with query
     if(g.members && g.members.some(m=>
       normalize(m).startsWith(q) ||
       normalize(m).split(' ').some(w=>w.startsWith(q))
     )) return true;
     return false;
   }).sort((a,b)=>{
-    // Prioritize labels that start with query
-    const aStarts = normalize(a.label).startsWith(q);
-    const bStarts = normalize(b.label).startsWith(q);
-    if(aStarts && !bStarts) return -1;
-    if(!aStarts && bStarts) return 1;
+    const aStarts=normalize(a.label).startsWith(q);
+    const bStarts=normalize(b.label).startsWith(q);
+    if(aStarts&&!bStarts) return -1;
+    if(!aStarts&&bStarts) return 1;
     return 0;
   }).slice(0,12);
   if(!matches.length){dropdown.classList.remove('open');dropdown.innerHTML='';return;}
-  dropdown.innerHTML=matches.map((g,i)=>{
+  dropdown.innerHTML=matches.map((g)=>{
     const sub=g.type==='family'?`<div class="dd-sub">${g.members.join(', ')}</div>`:'';
     return `<div class="dd-item" onclick='selectGuest(${JSON.stringify(g).replace(/'/g,"&#39;")})'><div class="dd-name">${g.label}</div>${sub}</div>`;
   }).join('');
   dropdown.classList.add('open');
 });
 
-// Prevent page jump on mobile when keyboard opens
 searchEl.addEventListener('focus',()=>{
   setTimeout(()=>searchEl.scrollIntoView({behavior:'smooth',block:'center'}),300);
 });
@@ -546,25 +542,28 @@ searchEl.addEventListener('focus',()=>{
 document.addEventListener('click',e=>{if(!e.target.closest('#search-wrap'))dropdown.classList.remove('open');});
 
 function selectGuest(guest){
+  window.currentGuest=guest;
   dropdown.classList.remove('open');
   searchEl.value=guest.label;
   document.getElementById('f-guest-name').value=guest.label;
   document.getElementById('f-guest-type').value=guest.type;
   document.getElementById('panel-title').textContent=guest.label;
-  const memSec=document.getElementById('members-section');
   const memList=document.getElementById('members-list');
   if(guest.type==='family'&&guest.members){
     memList.innerHTML=guest.members.map(m=>`<label class="member-check"><input type="checkbox" name="miembros" value="${m}" checked/><span>${m}</span></label>`).join('');
-    memSec.style.display='block';
-  } else {memSec.style.display='none';memList.innerHTML='';}
-  document.getElementById('plus-section').style.display=guest.plusOne?'block':'none';
+  } else {memList.innerHTML='';}
+  document.getElementById('members-section').style.display='none';
+  document.getElementById('plus-section').style.display='none';
   document.getElementById('plus-name-wrap').style.display='none';
   document.querySelectorAll('[name=plus_one]').forEach(r=>r.checked=false);
+  document.querySelectorAll('[name=asistencia]').forEach(r=>r.checked=false);
+  document.getElementById('extra-fields').style.display='none';
   document.getElementById('guest-panel').style.display='block';
-document.getElementById('search-wrap').style.display='none';
+  document.getElementById('search-wrap').style.display='none';
 }
 
 function resetSearch(){
+  window.currentGuest=null;
   searchEl.value='';
   document.getElementById('guest-panel').style.display='none';
   document.getElementById('search-wrap').style.display='block';
@@ -581,11 +580,11 @@ document.getElementById('rsvp-form').addEventListener('submit',async function(e)
   btn.textContent='Enviando…';btn.disabled=true;
   const fd=new FormData(this);
   const members=[...this.querySelectorAll('[name=miembros]:checked')].map(c=>c.value);
-const allMembers=[...this.querySelectorAll('[name=miembros]')].map(c=>c.value);
-if(allMembers.length){
-  fd.set('miembros_confirmados', members.join(', ') || 'Ninguno');
-  fd.set('miembros_no_van', allMembers.filter(m=>!members.includes(m)).join(', ') || 'Ninguno');
-}
+  const allMembers=[...this.querySelectorAll('[name=miembros]')].map(c=>c.value);
+  if(allMembers.length){
+    fd.set('miembros_confirmados', members.join(', ') || 'Ninguno');
+    fd.set('miembros_no_van', allMembers.filter(m=>!members.includes(m)).join(', ') || 'Ninguno');
+  }
   const payload={};
   for(const[k,v]of fd.entries())payload[k]=v;
   try{
@@ -684,6 +683,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
