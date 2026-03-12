@@ -321,14 +321,14 @@
                 document.getElementById('plus-section').style.display=currentGuest&&currentGuest.plusOne?'block':'none';
                 document.getElementById('f-food').closest('.fg').style.display='flex';
                 document.getElementById('f-song').closest('.fg').style.display='flex';
-                document.getElementById('extra-fields').style.display='flex';
+                document.getElementById('extra-fields').style.display='block';
               "/><label for="att-si">Sí, asistiré 🥂</label></div>
               <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="
                 document.getElementById('members-section').style.display='none';
                 document.getElementById('plus-section').style.display='none';
                 document.getElementById('f-food').closest('.fg').style.display='none';
                 document.getElementById('f-song').closest('.fg').style.display='none';
-                document.getElementById('extra-fields').style.display='flex';
+                document.getElementById('extra-fields').style.display='block';
               "/><label for="att-no">No podré asistir</label></div>
             </div>
           </div>
@@ -684,6 +684,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
