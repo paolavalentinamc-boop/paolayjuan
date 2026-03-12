@@ -316,13 +316,26 @@
           <div class="att-group">
             <span class="att-label-top">¿Asistirás?</span>
             <div class="att-options">
-  <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="document.getElementById('extra-fields').style.display='block';document.getElementById('members-section').style.display=document.getElementById('f-guest-type').value==='family'?'block':'none';"/><label for="att-si">Sí, asistiré 🥂</label></div>
-  <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="document.getElementById('extra-fields').style.display='none';document.getElementById('members-section').style.display='none';"/><label for="att-no">No podré asistir</label></div>
-</div>
+              <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="
+                document.getElementById('members-section').style.display=currentGuest&&currentGuest.type==='family'?'block':'none';
+                document.getElementById('plus-section').style.display=currentGuest&&currentGuest.plusOne?'block':'none';
+                document.getElementById('f-food').closest('.fg').style.display='flex';
+                document.getElementById('f-song').closest('.fg').style.display='flex';
+                document.getElementById('extra-fields').style.display='flex';
+              "/><label for="att-si">Sí, asistiré 🥂</label></div>
+              <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="
+                document.getElementById('members-section').style.display='none';
+                document.getElementById('plus-section').style.display='none';
+                document.getElementById('f-food').closest('.fg').style.display='none';
+                document.getElementById('f-song').closest('.fg').style.display='none';
+                document.getElementById('extra-fields').style.display='flex';
+              "/><label for="att-no">No podré asistir</label></div>
+            </div>
           </div>
           <div id="members-section">
-<span class="members-label">¿Quiénes asistirán?</span>
-<p style="font-size:.75rem;color:rgba(253,250,245,.45);font-style:italic;font-family:var(--font-s);margin-bottom:1rem;line-height:1.7;">👇 Selecciona quiénes asistirán. Los demás integrantes no necesitan llenar este formulario por separado.</p>            <div class="members-list" id="members-list"></div>
+            <span class="members-label">¿Quiénes asistirán?</span>
+            <p style="font-size:.75rem;color:rgba(253,250,245,.45);font-style:italic;font-family:var(--font-s);margin-bottom:1rem;line-height:1.7;">👇 Selecciona quiénes asistirán. Los demás integrantes no necesitan llenar este formulario por separado.</p>
+            <div class="members-list" id="members-list"></div>
           </div>
           <div id="plus-section">
             <span class="plus-label">¿Llevas acompañante?</span>
@@ -671,5 +684,6 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
