@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><!DOCTYPE html>
-<html lang="es">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -539,12 +537,14 @@ function selectGuest(guest){
   const memList=document.getElementById('members-list');
   if(guest.type==='family'&&guest.members){
     memList.innerHTML=guest.members.map(m=>`<label class="member-check"><input type="checkbox" name="miembros" value="${m}" checked/><span>${m}</span></label>`).join('');
-    memSec.style.display='block';
+    memSec.style.display='none';
   } else {memSec.style.display='none';memList.innerHTML='';}
-  document.getElementById('plus-section').style.display=guest.plusOne?'block':'none';
+  currentGuest=guest;
+  document.getElementById('plus-section').style.display='none';
   document.getElementById('plus-name-wrap').style.display='none';
   document.querySelectorAll('[name=plus_one]').forEach(r=>r.checked=false);
-  document.getElementById('extra-fields').style.display='block';
+  document.querySelectorAll('[name=asistencia]').forEach(r=>r.checked=false);
+  document.getElementById('extra-fields').style.display='none';
   document.getElementById('guest-panel').style.display='block';
   document.getElementById('search-wrap').style.display='none';
 }
@@ -666,5 +666,6 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
