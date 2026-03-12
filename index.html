@@ -316,9 +316,9 @@
           <div class="att-group">
             <span class="att-label-top">¿Asistirás?</span>
             <div class="att-options">
-              <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí"/><label for="att-si">Sí, asistiré 🥂</label></div>
-              <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No"/><label for="att-no">No podré asistir</label></div>
-            </div>
+  <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="document.getElementById('extra-fields').style.display='block';document.getElementById('members-section').style.display=document.getElementById('f-guest-type').value==='family'?'block':'none';"/><label for="att-si">Sí, asistiré 🥂</label></div>
+  <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="document.getElementById('extra-fields').style.display='none';document.getElementById('members-section').style.display='none';"/><label for="att-no">No podré asistir</label></div>
+</div>
           </div>
           <div id="members-section">
 <span class="members-label">¿Quiénes asistirán?</span>
@@ -547,9 +547,8 @@ function selectGuest(guest){
   document.getElementById('plus-section').style.display=guest.plusOne?'block':'none';
   document.getElementById('plus-name-wrap').style.display='none';
   document.querySelectorAll('[name=plus_one]').forEach(r=>r.checked=false);
-  document.getElementById('extra-fields').style.display='block';
   document.getElementById('guest-panel').style.display='block';
-  document.getElementById('search-wrap').style.display='none';
+document.getElementById('search-wrap').style.display='none';
 }
 
 function resetSearch(){
@@ -672,6 +671,7 @@ function closeMenu(){document.getElementById('navLinks').classList.remove('open'
 
 </body>
 </html>
+
 
 
 
