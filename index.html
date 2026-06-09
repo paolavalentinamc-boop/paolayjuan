@@ -287,85 +287,14 @@
 
 <!-- RSVP -->
 <section id="rsvp">
-  <div class="inner">
+  <div class="inner" style="text-align:center;">
     <span class="stag reveal">RSVP</span>
     <h2 class="stitle reveal">Confirma tu asistencia</h2>
     <div class="rule reveal"></div>
-    <p class="rsvp-sub reveal">Responde antes del 15 de mayo de 2026.</p>
-
-    <div class="rsvp-ok" id="rsvp-ok">
-      <h3>¡Hasta pronto!</h3>
-      <p>Recibimos tu confirmación. Nos llena de alegría.<br/>Nos vemos el 17 de julio. 🍷</p>
-    </div>
-
-    <div id="rsvp-main" class="reveal">
-      <div class="search-wrap" id="search-wrap">
-        <label class="search-label" for="guest-search">¿Cómo te llamas?</label>
-        <input type="text" id="guest-search" class="search-input" placeholder="Escribe tu nombre para encontrarte…" autocomplete="off"/>
-        <div class="dropdown" id="dropdown"></div>
-      </div>
-
-      <div id="guest-panel">
-        <div class="guest-header">
-          <div class="guest-header-name" id="panel-title"></div>
-          <button class="change-btn" onclick="resetSearch()">← Cambiar</button>
-        </div>
-        <form id="rsvp-form">
-          <input type="hidden" id="f-guest-name" name="invitado"/>
-          <input type="hidden" id="f-guest-type" name="tipo"/>
-          <div class="att-group">
-            <span class="att-label-top">¿Asistirás?</span>
-            <div class="att-options">
-              <div class="att-opt"><input type="radio" name="asistencia" id="att-si" value="Sí" onchange="
-                document.getElementById('members-section').style.display=window.currentGuest&&window.currentGuest.type==='family'?'block':'none';
-                document.getElementById('plus-section').style.display=window.currentGuest&&window.currentGuest.plusOne?'block':'none';
-                document.getElementById('f-food').closest('.fg').style.display='flex';
-                document.getElementById('f-song').closest('.fg').style.display='flex';
-                document.getElementById('extra-fields').style.display='block';
-              "/><label for="att-si">Sí, asistiré 🥂</label></div>
-              <div class="att-opt"><input type="radio" name="asistencia" id="att-no" value="No" onchange="
-                document.getElementById('members-section').style.display='none';
-                document.getElementById('plus-section').style.display='none';
-                document.getElementById('f-food').closest('.fg').style.display='none';
-                document.getElementById('f-song').closest('.fg').style.display='none';
-                document.getElementById('extra-fields').style.display='block';
-              "/><label for="att-no">No podré asistir</label></div>
-            </div>
-          </div>
-          <div id="members-section" style="display:none;margin-bottom:2rem;">
-            <span class="members-label">¿Quiénes asistirán?</span>
-            <p style="font-size:.75rem;color:rgba(253,250,245,.45);font-style:italic;font-family:var(--font-s);margin-bottom:1rem;line-height:1.7;">👇 Selecciona quiénes asistirán. Los demás integrantes no necesitan llenar este formulario por separado.</p>
-            <div class="members-list" id="members-list"></div>
-          </div>
-          <div id="plus-section" style="display:none;margin-bottom:2rem;">
-            <span class="plus-label">¿Llevas acompañante?</span>
-            <div class="plus-options att-options">
-              <div class="att-opt"><input type="radio" name="plus_one" id="plus-si" value="Sí"/><label for="plus-si">Sí, llevo +1</label></div>
-              <div class="att-opt"><input type="radio" name="plus_one" id="plus-no" value="No"/><label for="plus-no">Voy solo/a</label></div>
-            </div>
-            <div class="plus-name-wrap" id="plus-name-wrap">
-              <input type="text" name="nombre_plus" placeholder="Nombre de tu acompañante"/>
-            </div>
-          </div>
-          <div class="extra-fields" id="extra-fields" style="display:none;">
-            <div class="fg">
-              <label for="f-food">Restricción alimentaria</label>
-              <input type="text" id="f-food" name="restriccion" placeholder="Ninguna / vegetariano / alérgico a…"/>
-            </div>
-            <div class="fg">
-              <label for="f-song">¿Qué canción no puede faltar? 🎶</label>
-              <input type="text" id="f-song" name="cancion" placeholder="Artista — canción…"/>
-            </div>
-            <div class="fg">
-              <label for="f-msg">Mensaje para los novios</label>
-              <textarea id="f-msg" name="mensaje" placeholder="Un deseo, una palabra, lo que quieras decirnos…"></textarea>
-            </div>
-            <div class="submit-wrap">
-              <button type="submit" class="btn btn-dark">Enviar confirmación</button>
-            </div>
-          </div>
-        </form>
-      </div>
+    <div class="reveal" style="padding:3rem 2rem;border:1px solid rgba(253,250,245,.15);background:rgba(255,255,255,.06);">
+      <div style="font-size:2.5rem;margin-bottom:1.5rem;">🍷</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;font-weight:300;color:var(--cream);line-height:1.8;margin-bottom:1rem;">El periodo de confirmación ya cerró.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;font-weight:300;color:rgba(253,250,245,.6);line-height:1.8;">Si ya confirmaste tu asistencia, ¡nos vemos el 17 de julio! 🍷</p>
     </div>
   </div>
 </section>
